@@ -21,7 +21,7 @@ npm manifest:
   {
     "name": "react-production",
     "version": "1.0.0",
-    "main": "index.ts",
+    "main": "index.tsx",
     "repository": "git@github.com:Olovyannikov/react-production.git",
     "author": "Ilya Olovyannikov <IVOlovyannikov@sberbank.ru>",
     "license": "MIT",
