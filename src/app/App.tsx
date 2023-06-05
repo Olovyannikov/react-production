@@ -1,11 +1,10 @@
-import {Suspense, useEffect, useState} from "react";
+import {Suspense} from "react";
 import {Link, Route, Routes} from "react-router-dom";
-import {IndexPageLazy} from "./pages/IndexPage/index.lazy";
-import {AboutPageLazy} from "./pages/AboutPage/index.lazy";
+
+import {AboutPageLazy, IndexPageLazy} from "@/pages";
+import {useTheme} from "@/app/providers/ThemeProvider";
 
 import './assets/styles/index.scss';
-import {useTheme} from "./theme/useTheme";
-
 
 export const App = () => {
     const {toggleTheme} = useTheme();
