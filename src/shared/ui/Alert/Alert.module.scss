@@ -1,0 +1,85 @@
+.alert {
+  --padding-top: var(--offset-sm);
+  --padding-left: var(--offset-md);
+  --padding-right: var(--offset-md);
+  --padding-bottom: var(--offset-sm);
+
+  display: flex;
+  align-items: center;
+  gap: var(--offset-md);
+  font-size: var(--size-md);
+  position: relative;
+  border-radius: var(--size-xs);
+  box-sizing: border-box;
+  color: var(--text-color);
+  padding: var(--padding-top) var(--padding-right) var(--padding-bottom) var(--padding-left);
+  box-shadow: var(--box-shadow);
+  width: fit-content;
+}
+
+.alert.success {
+  color: var(--success);
+}
+
+.alert.info {
+  color: var(--info);
+}
+
+.alert.warning {
+  color: var(--warning);
+}
+
+.alert.error {
+  color: var(--error);
+}
+
+.alert.inset {
+  box-shadow: var(--box-shadow-inset);
+}
+
+.alert.flat {
+  box-shadow: none!important;
+}
+
+.alert.bordered {
+  border: 1px solid var(--border-color);
+}
+
+.alert.rounded {
+  border-radius: var(--size-xl);
+}
+
+.alert.outlined {
+  box-shadow: none!important;
+  border: 1px solid currentColor;
+}
+
+.alert.border-top {
+  padding-top: 6px;
+  border-top: 6px solid currentColor;
+}
+.alert.border-bottom {
+  padding-bottom: 6px;
+  border-bottom: 6px solid currentColor;
+}
+.alert.border-left {
+  padding-left: 6px;
+  border-left: 6px solid currentColor;
+}
+.alert.border-right {
+  padding-right: 6px;
+  border-right: 6px solid currentColor;
+}
+
+.alert.dense {
+  --padding-top: 8px;
+  --padding-left: 12px;
+  --padding-right: 12px;
+  --padding-bottom: 8px;
+}
+
+.icon,
+.close {
+  display: flex;
+  place-content: center;
+}

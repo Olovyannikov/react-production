@@ -89,3 +89,9 @@
     background-image: url($webp);
   }
 }
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -27,14 +27,18 @@
     // можно писать такой
     // import React from 'react';
     "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./src/*"]
 //      "*": ["./src/*"],
 //      "*": ["./src/*"],
 //      "*": ["./src/*"]
     }
   },
+  "include": ["src", "src/app/types/global.d.ts", "src/app/types/css.d.ts"],
+  "exclude": ["node_modules"],
+  "files": ["node_modules/@types/webpack/index.d.ts"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

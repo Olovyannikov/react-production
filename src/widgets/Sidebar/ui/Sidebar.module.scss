@@ -1,0 +1,9 @@
+.sidebar {
+  width: var(--sidebar-collapsed);
+  height: calc(100vh - var(--navbar-height));
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  width: var(--sidebar-width);
+}

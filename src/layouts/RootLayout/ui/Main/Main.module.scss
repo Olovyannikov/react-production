@@ -1,0 +1,13 @@
+.main {
+  padding: 0 var(--offset-xs);
+  width: 100%;
+  height: fit-content;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.aside {
+  flex-shrink: 0;
+}

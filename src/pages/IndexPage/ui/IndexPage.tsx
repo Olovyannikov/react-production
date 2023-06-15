@@ -1,5 +1,9 @@
+import {RootLayout} from "@/layouts/RootLayout/ui";
+
 export default function IndexPage() {
     return (
-        <h2>Hello From Index</h2>
+        <RootLayout>
+            <h2>Hello World</h2>
+        </RootLayout>
     )
 }

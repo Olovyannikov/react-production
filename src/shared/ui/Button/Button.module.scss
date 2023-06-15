@@ -1,0 +1,99 @@
+.button {
+  @include btn-reset;
+  --btn-height: 36px;
+  outline: none;
+  min-width: 64px;
+  padding: 0 var(--offset-sm);
+  user-select: none;
+  border-radius: var(--size-xxs);
+  align-items: center;
+  display: inline-flex;
+  box-sizing: border-box;
+  justify-content: center;
+  color: var(--text-color);
+  height: var(--btn-height);
+  box-shadow: var(--box-shadow);
+  background-color: var(--bg-color);
+  transition: box-shadow .2s ease-in-out;
+  -webkit-tap-highlight-color: transparent!important;
+  letter-spacing: 1.05px;
+  font: var(--font-sm-500);
+  max-width: inherit;
+  text-shadow: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: var(--box-shadow-hover);
+  }
+
+  &:active {
+    box-shadow: var(--box-shadow-inset)!important
+  }
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: .6;
+  pointer-events: none;
+  --border-color: var(--text-color-disabled);
+  --text-color: var(--text-color-disabled);
+}
+
+.rounded {
+  border-radius: 56px!important;
+}
+
+.depressed {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.bordered {
+  border: 1px solid var(--light-border-color);
+}
+
+.outlined {
+  box-shadow: none!important;
+  transition: none!important;
+  --bg-color: transparent!important;
+  border: 1px solid var(--border-color);
+}
+
+.text {
+  box-shadow: none!important;
+  transition: none!important;
+  --bg-color: transparent!important;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+
+.small {
+  --btn-height: 30px;
+}
+
+.medium {
+  --btn-height: 36px;
+}
+
+.large {
+  --btn-height: 42px;
+}
+
+.dark {
+  --bg-color: var(--dark-bg);
+  --text-color: var(--g-text-color-dark);
+  --light-border-color: var(--dark-bg-light-shadow);
+  --text-color-disabled: var(--g-text-color-disabled-dark);
+  --box-shadow: 5px 5px 12px var(--dark-bg-dark-shadow),-4px -4px 10px var(--dark-bg-light-shadow);
+  --box-shadow-hover: 2px 2px 5px var(--dark-bg-dark-shadow),-2px -2px 5px var(--dark-bg-light-shadow);
+  --box-shadow-inset: inset -2px -2px 5px var(--dark-bg-light-shadow),inset 2px 2px 5px var(--dark-bg-dark-shadow);
+  --box-shadow-inset-low: inset -1px -1px 3px var(--dark-bg-light-shadow),inset 1px 1px 3px var(--dark-bg-dark-shadow);
+  --box-shadow-fab: 10px 10px 20px var(--dark-bg-dark-shadow),-7px -7px 16px var(--dark-bg-light-shadow);
+}
+
+.dark.outlined {
+  border-color: var(--text-color);
+}

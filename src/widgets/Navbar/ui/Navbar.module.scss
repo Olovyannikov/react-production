@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--navbar-height);
+  padding: var(--offset-lg);
+  background-color: var(--greyLight-1);
+
+
+  box-shadow:.8rem .8rem 1.4rem var(--greyLight-2),
+  -.2rem -.2rem 1.8rem var(--white);
+}
+
+.list {
+  @include list-reset;
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+}
+
+.hr {
+  border: 0;
+  border-radius: 10px;
+  background: var(--bg-color);
+  height: 5px;
+  box-shadow: var(--box-shadow-inset-dense);
+}

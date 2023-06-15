@@ -1,0 +1,70 @@
+.switch {
+  --selector-bg: var(--primary);
+  @include flex-center;
+  margin: var(--offset-xxs) var(--offset-xs);
+  padding: var(--offset-xxs);
+}
+
+.switch input {
+  width: 26px;
+  height: 26px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+  display: inline-block;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  transition: all .2s ease-in-out;
+
+  &::before, &::after {
+    content: "";
+    overflow: hidden;
+    position: absolute;
+    border-radius: 32px;
+    background-color: var(--bg-color);
+  }
+
+  &::before {
+    z-index: 2;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    transform: translateZ(0);
+    box-shadow: var(--box-shadow-small);
+    transition: all .2s cubic-bezier(.85,.05,.18,1.35);
+  }
+
+  &::after {
+    z-index: 1;
+    width: 48px;
+    height: 28px;
+    isolation: isolate;
+    box-shadow: var(--box-shadow-inset);
+  }
+
+  &:checked::before {
+    transform: translate3d(100%,0,0);
+    background-color: var(--selector-bg);
+  }
+
+  &:hover::before {
+    background-color: var(--selector-bg);
+  }
+}
+
+.switch label {
+  font-size: 16px;
+  margin-left: 28px;
+  margin-top: -2px;
+  color: var(--text-color);
+}
+
+.switch label p {
+  letter-spacing: .5px;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-color);
+}
