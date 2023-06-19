@@ -1,5 +1,5 @@
-import cn from "clsx";
-import {ElementType,  ReactNode} from "react";
+import cn from 'clsx';
+import { ElementType,  ReactNode } from 'react';
 import s from './Typography.module.scss';
 
 type TypographyVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body1' | 'body2' | 'subtitle1' | 'subtitle2' | 'caption' | 'overline';
@@ -11,7 +11,7 @@ interface TypographyProps<T extends ElementType> {
     variant?: TypographyVariant;
 }
 
-export const Typography = <T extends ElementType = 'p'>({as, className, variant = 'body1', children}: TypographyProps<T>) => {
+export const Typography = <T extends ElementType = 'p'>({ as, className, variant = 'body1', children }: TypographyProps<T>) => {
     let Tag = as ?? 'p';
 
     if (variant.includes('h')) {
@@ -19,8 +19,10 @@ export const Typography = <T extends ElementType = 'p'>({as, className, variant 
     }
 
     return (
-        <Tag className={cn(s.text, className, {
-            [s[variant]]: variant
-        })}>{children}</Tag>
+        <Tag
+            className={cn(s.text, className, {
+                [s[variant]]: variant
+            })}
+        >{children}</Tag>
     )
 }

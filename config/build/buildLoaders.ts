@@ -1,9 +1,9 @@
-import path from "path";
-import webpack from "webpack";
-import loaderUtils from "loader-utils";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import {loader} from 'loader-utils/node_modules/@types/webpack';
-import {BuildOptions} from "./types/config";
+import path from 'path';
+import webpack from 'webpack';
+import loaderUtils from 'loader-utils';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { loader } from 'loader-utils/node_modules/@types/webpack';
+import { BuildOptions } from './types/config';
 
 const getLocalIdent = (
     context: loader.LoaderContext,
@@ -43,7 +43,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                 presets: ['@babel/preset-env'],
                 plugins: [
                     [
-                        "i18next-extract",
+                        'i18next-extract',
                         {
                             locales: ['ru', 'en'],
                             keyAsDefaultValue: true
@@ -61,7 +61,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         test: /\.css$/i,
         exclude: /\.module\.css/i,
         use: [
-            {loader: styleLoader},
+            { loader: styleLoader },
             {
                 loader: 'css-loader',
                 options: {
@@ -79,7 +79,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const moduleCssLoader = {
         test: /\.module\.css$/i,
         use: [
-            {loader: styleLoader},
+            { loader: styleLoader },
             {
                 loader: 'css-loader',
                 options: {
@@ -103,9 +103,9 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const sassLoader = {
         test: /\.s[ac]ss$/i,
         use: [
-            {loader: styleLoader},
+            { loader: styleLoader },
             {
-                loader: "css-loader",
+                loader: 'css-loader',
                 options: {
                     modules: {
                         getLocalIdent,
@@ -114,7 +114,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                 }
             },
             {
-                loader: "sass-loader",
+                loader: 'sass-loader',
                 options: {
                     // Если используется sass, тут живут глобальные импорты для миксинов
                     additionalData: '@import "app/styles/general/_mixins.scss";',

@@ -1,5 +1,5 @@
-import {RouteProps} from "react-router-dom";
-import {AboutPageLazy, IndexPageLazy} from "@/pages";
+import { RouteProps } from 'react-router-dom';
+import { AboutPageLazy, IndexPageLazy } from '@/pages';
 
 export enum AppRoutes {
     INDEX = 'index',

@@ -1,6 +1,6 @@
-import {ResolveOptions} from "webpack";
-import {BuildOptions} from "./types/config";
-import {buildAliases} from "./buildAliases";
+import { ResolveOptions } from 'webpack';
+import { BuildOptions } from './types/config';
+import { buildAliases } from './buildAliases';
 
 export function buildResolvers(options: BuildOptions): ResolveOptions {
     return {

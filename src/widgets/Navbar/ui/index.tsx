@@ -1,13 +1,13 @@
 import cn from 'clsx';
-import {DetailedHTMLProps, HTMLAttributes} from "react";
-import {AppLink} from "@/shared/ui/AppLink";
-import {ThemeSwitcher} from "@/widgets/ThemeSwitcher/ui";
-import {LangSwitcher} from "@/widgets/LangSwitcher/ui";
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { AppLink } from '@/shared/ui/AppLink';
+import { ThemeSwitcher } from '@/widgets/ThemeSwitcher/ui';
+import { LangSwitcher } from '@/widgets/LangSwitcher/ui';
 import s from './Navbar.module.scss';
 
 type NavbarProps = DetailedHTMLProps<HTMLAttributes<HTMLUListElement>, HTMLUListElement>;
 
-export const Navbar = ({className, ...props}: NavbarProps) => {
+export const Navbar = ({ className, ...props }: NavbarProps) => {
     return (
         <>
             <nav className={s.nav}>

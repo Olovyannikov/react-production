@@ -1,17 +1,19 @@
-import {DetailedHTMLProps, HTMLAttributes} from "react";
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import s from './Sidebar.module.scss';
-import cn from "clsx";
-import {useToggle} from "@/shared/hooks";
+import cn from 'clsx';
+import { useToggle } from '@/shared/hooks';
 
-interface SidebarProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> {}
+type SidebarProps = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>
 
-export const Sidebar = ({children, className}: SidebarProps) => {
+export const Sidebar = ({ children, className }: SidebarProps) => {
     const [isOpen, toggle] = useToggle(true);
 
     return (
-        <aside className={cn(s.sidebar, className, {
-            [s.open]: isOpen
-        })}>
+        <aside
+            className={cn(s.sidebar, className, {
+                [s.open]: isOpen
+            })}
+        >
             {children}
             <button onClick={toggle}>Toggle</button>
         </aside>

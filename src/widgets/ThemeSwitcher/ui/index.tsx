@@ -1,15 +1,15 @@
-import cn from "clsx";
-import {DetailedHTMLProps, HTMLAttributes} from "react";
-import {useTheme} from "@/app/providers/ThemeProvider";
-import {Theme} from "@/app/providers/ThemeProvider/lib/ThemeContext";
-import {MdOutlineDarkMode, MdSunny} from "react-icons/md";
-import {Switch} from "@/shared/ui/Switch";
+import cn from 'clsx';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { useTheme } from '@/app/providers/ThemeProvider';
+import { Theme } from '@/app/providers/ThemeProvider/lib/ThemeContext';
+import { MdOutlineDarkMode, MdSunny } from 'react-icons/md';
+import { Switch } from '@/shared/ui/Switch';
 import s from './ThemeSwitcher.module.scss';
 
 type ThemeSwitcherProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
-export const ThemeSwitcher = ({className, ...props}: ThemeSwitcherProps) => {
-    const {toggleTheme, theme} = useTheme();
+export const ThemeSwitcher = ({ className, ...props }: ThemeSwitcherProps) => {
+    const { toggleTheme, theme } = useTheme();
 
     return (
         <div className={cn(s.switch, className)} {...props}>

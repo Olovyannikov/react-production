@@ -1,4 +1,4 @@
-import {Navbar} from "@/widgets/Navbar";
+import { Navbar } from '@/widgets/Navbar';
 
 export const Header = () => {
     return (
