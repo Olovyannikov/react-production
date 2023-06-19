@@ -11,6 +11,9 @@ export const Sidebar = ({children, className}: SidebarProps) => {
     return (
         <aside className={cn(s.sidebar, className, {
             [s.open]: isOpen
-        })}>{children}<button onClick={toggle}>Toggle</button></aside>
+        })}>
+            {children}
+            <button onClick={toggle}>Toggle</button>
+        </aside>
     )
 }

@@ -1,6 +1,7 @@
 import cn from "clsx";
 import {CSSProperties, DetailedHTMLProps, HTMLAttributes, ReactNode, useState} from "react";
 import {IoClose} from "react-icons/io5";
+import type {Range} from '@/shared/lib/types/Range';
 import s from './Alert.module.scss';
 
 interface AlertProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -12,7 +13,7 @@ interface AlertProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, H
     color?: string;
     dark?: boolean;
     dense?: boolean;
-    elevation?: '1';
+    elevation?: Range<0, 5>;
     flat?: boolean;
     inset?: boolean;
     outlined?: boolean;
@@ -36,7 +37,7 @@ export const Alert = ({
                           flat,
                           dense,
                           inset = false,
-                          elevation,
+                          elevation = 1,
                           dark,
                           outlined = false,
                           type,

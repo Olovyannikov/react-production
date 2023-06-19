@@ -1,9 +1,10 @@
 import {RootLayout} from "@/layouts/RootLayout/ui";
+import {Alert} from "@/shared/ui/Alert";
 
 export default function IndexPage() {
     return (
         <RootLayout>
-            <h2>Hello World</h2>
+            <Alert>ALert message</Alert>
         </RootLayout>
     )
 }
