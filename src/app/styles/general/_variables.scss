@@ -1,6 +1,6 @@
 /* Fonts */
 :root {
-  --font-main: 'Roboto', 'Verdana', sans-serif;
+  --font-main: "Roboto", "Verdana", sans-serif;
   --font-md: 400 16px / 24px var(--font-main);
   --font-lg: 400 24px / 32px var(--font-main);
   --font-sm-500: 500 14px / 16px var(--font-main);
@@ -44,26 +44,24 @@
   --info: #2196f3;
   --success: #4caf50;
   --warning: #dfa700;
-
-  --g-text-color-light: rgba(0,0,0,0.93);
-  --g-text-color-disabled-light: rgba(0,0,0,0.45);
-  --g-text-color-secondary-light: rgba(0,0,0,0.7);
-  --g-text-color-dark: hsla(0,0%,100%,0.93);
-  --g-text-color-disabled-dark: hsla(0,0%,100%,0.45);
-  --g-text-color-secondary-dark: hsla(0,0%,100%,0.7);
+  --g-text-color-light: rgb(0 0 0 / 93%);
+  --g-text-color-disabled-light: rgb(0 0 0 / 45%);
+  --g-text-color-secondary-light: rgb(0 0 0 / 70%);
+  --g-text-color-dark: hsl(0deg 0% 100% / 93%);
+  --g-text-color-disabled-dark: hsl(0deg 0% 100% / 45%);
+  --g-text-color-secondary-dark: hsl(0deg 0% 100% / 70%);
   --g-bg-color-disabled-light: #dee5e8;
   --g-bg-color-disabled-dark: #727272;
-
   --light-bg: #e4ebf5;
   --light-bg-dark-shadow: #bec8e4;
-  --light-bg-light-shadow: #ffffff;
-  --dark-bg: #444444;
+  --light-bg-light-shadow: #fff;
+  --dark-bg: #444;
   --dark-bg-dark-shadow: #363636;
   --dark-bg-light-shadow: #525252;
 }
 
 /* Shadows */
 :root {
-  --box-shadow-small: 1px 1px 2px var(--light-bg-dark-shadow),-1px -1px 2px var(--light-bg-light-shadow);
-  --box-shadow-hover: 2px 2px 5px var(--light-bg-dark-shadow),-2px -2px 5px var(--light-bg-light-shadow);
+  --box-shadow-small: 1px 1px 2px var(--light-bg-dark-shadow), -1px -1px 2px var(--light-bg-light-shadow);
+  --box-shadow-hover: 2px 2px 5px var(--light-bg-dark-shadow), -2px -2px 5px var(--light-bg-light-shadow);
 }

@@ -12,7 +12,7 @@ interface AlertProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, H
     closeIcon?: ReactNode;
     color?: string;
     dark?: boolean;
-    dense?: boolean;
+    dense?: boolean; 
     elevation?: Range<0, 5>;
     flat?: boolean;
     inset?: boolean;

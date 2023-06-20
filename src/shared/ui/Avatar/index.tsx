@@ -1,7 +1,7 @@
-import s from './Avatar.module.scss';
 import cn from 'clsx';
 import { ReactNode } from 'react';
 import { isNumber } from 'lodash-es';
+import s from './Avatar.module.scss'; 
 
 interface AvatarProps {
     src?: string;
@@ -15,7 +15,17 @@ interface AvatarProps {
     children?: ReactNode;
 }
 
-export const Avatar = ({ src, alt, className, children, color = 'var(--white)', bgColor = 'var(--primary)', size = 'medium', square = false, rounded = false }: AvatarProps) => {
+export const Avatar = ({
+    src,
+    alt,
+    className,
+    children,
+    color = 'var(--white)',
+    bgColor = 'var(--primary)',
+    size = 'medium',
+    square = false,
+    rounded = false
+}: AvatarProps) => {
     return (
         <div
             className={cn(s.avatar, className, {
