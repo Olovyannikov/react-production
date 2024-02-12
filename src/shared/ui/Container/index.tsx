@@ -1,8 +1,8 @@
 import cn from 'clsx';
-import { DetailedHTMLProps, ElementType, HTMLAttributes } from 'react';
+import { ComponentProps, ElementType } from 'react';
 import s from './Container.module.scss';
 
-interface ContainerProps<T extends ElementType> extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+interface ContainerProps<T extends ElementType> extends ComponentProps<'div'> {
     as?: T;
 }
 

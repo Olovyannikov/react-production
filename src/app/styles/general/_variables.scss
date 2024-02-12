@@ -1,9 +1,38 @@
 /* Fonts */
 :root {
   --font-main: "Roboto", "Verdana", sans-serif;
-  --font-md: 400 16px / 24px var(--font-main);
-  --font-lg: 400 24px / 32px var(--font-main);
-  --font-sm-500: 500 14px / 16px var(--font-main);
+  /* display */
+  --font-display-1: 700 78px / 84px var(--font-main);
+  --font-display-2: 700 62px / 76px var(--font-main);
+  --font-display-3: 700 44px / 52px var(--font-main);
+  --font-display-4: 700 28px / 40px var(--font-main);
+  /* heading */
+  --font-heading-1: 700 42px / 54px var(--font-main);
+  --font-heading-2: 700 32px / 48px var(--font-main);
+  --font-heading-3: 700 24px / 34px var(--font-main);
+  --font-heading-4: 700 22px / 28px var(--font-main);
+  --font-heading-5: 700 18px / 24px var(--font-main);
+  --font-heading-6: 700 16px / 22px var(--font-main);
+  /* body */
+  --font-body-large: 400 18px / 32px var(--font-main);
+  --font-body-default: 400 14px / 26px var(--font-main);
+  --font-body-small: 400 12px / 22px var(--font-main);
+  /* text single */
+  --font-text-single-400-regular: 400 18px / 20px var(--font-main);
+  --font-text-single-400-medium: 500 18px / 20px var(--font-main);
+  --font-text-single-400-bold: 700 18px / 20px var(--font-main);
+
+  --font-text-single-300-regular: 400 16px / 18px var(--font-main);
+  --font-text-single-300-medium: 500 16px / 18px var(--font-main);
+  --font-text-single-300-bold: 700 16px / 18px var(--font-main);
+
+  --font-text-single-200-regular: 400 14px / 16px var(--font-main);
+  --font-text-single-200-medium: 500 14px / 16px var(--font-main);
+  --font-text-single-200-bold: 700 14px / 16px var(--font-main);
+
+  --font-text-single-100-regular: 400 12px / 14px var(--font-main);
+  --font-text-single-100-medium: 500 12px / 14px var(--font-main);
+  --font-text-single-100-bold: 700 12px / 14px var(--font-main);
 }
 
 /* Sizes */
@@ -21,47 +50,56 @@
   --size-3xl: 32px;
 }
 
-/* Offset */
+/* Primary colors */
 :root {
-  --offset-xxs: 4px;
-  --offset-xs: 8px;
-  --offset-sm: 12px; // 12
-  --offset-md: 16px; // 16
-  --offset-lg: 20px; // 20
-  --offset-xl: 24px; // 24
-  --offset-2xl: 28px; // 28
-  --offset-3xl: 32px; // 32
+  --purple-800: #472eb5;
+  --purple-700: #5d3eca;
+  --purple-600: #7d42fb;
+  --purple-500: #8f75e7;
+  --purple-400: #c8bdff;
+  --purple-300: #eae6ff;
+  --purple-200: #f2f1ff;
+  --purple-100: #fafafc;
 }
 
-/* Helpers */
+/* Neutral Colors */
 :root {
-  --white: #fff;
-  --black: #000;
-  --primary: #2979ff;
-  --primary-dark: #2962ff;
-  --primary-light: #82b1ff;
-  --error: #ff5252;
-  --info: #2196f3;
-  --success: #4caf50;
-  --warning: #dfa700;
-  --g-text-color-light: rgb(0 0 0 / 93%);
-  --g-text-color-disabled-light: rgb(0 0 0 / 45%);
-  --g-text-color-secondary-light: rgb(0 0 0 / 70%);
-  --g-text-color-dark: hsl(0deg 0% 100% / 93%);
-  --g-text-color-disabled-dark: hsl(0deg 0% 100% / 45%);
-  --g-text-color-secondary-dark: hsl(0deg 0% 100% / 70%);
-  --g-bg-color-disabled-light: #dee5e8;
-  --g-bg-color-disabled-dark: #727272;
-  --light-bg: #e4ebf5;
-  --light-bg-dark-shadow: #bec8e4;
-  --light-bg-light-shadow: #fff;
-  --dark-bg: #444;
-  --dark-bg-dark-shadow: #363636;
-  --dark-bg-light-shadow: #525252;
+  --neutral-700: #18191b;
+  --neutral-600: #313845;
+  --neutral-500: #6e798b;
+  --neutral-400: #b6b9ce;
+  --neutral-300: #d3d8e7;
+  --neutral-200: #e4e6f1;
+  --neutral-100: #f3f5fb;
+  --white: #ffffff;
+  --black: #1e1b39;
+}
+
+/* System Colors */
+:root {
+  --blue-400: #2d5bff;
+  --blue-300: #93aafd;
+  --blue-200: #c6d2fd;
+  --blue-100: #f3f6ff;
+
+  --green-400: #00974e;
+  --green-300: #86dd85;
+  --green-200: #bcefbd;
+  --green-100: #eefef0;
+
+  --yellow-400: #edab02;
+  --yellow-300: #fbd34d;
+  --yellow-200: #fde689;
+  --yellow-100: #fff5ca;
+
+  --red-400: #de350b;
+  --red-300: #f04438;
+  --red-200: #fecbca;
+  --red-100: #ffedeb;
 }
 
 /* Shadows */
 :root {
-  --box-shadow-small: 1px 1px 2px var(--light-bg-dark-shadow), -1px -1px 2px var(--light-bg-light-shadow);
-  --box-shadow-hover: 2px 2px 5px var(--light-bg-dark-shadow), -2px -2px 5px var(--light-bg-light-shadow);
+  --box-shadow-small: 1px 1px 2px var(--neutral-300), -1px -1px 2px var(--neutral-400);
+  --box-shadow-hover: 2px 2px 5px var(--neutral-300), -2px -2px 5px var(--neutral-400);
 }

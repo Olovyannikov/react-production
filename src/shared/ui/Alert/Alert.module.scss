@@ -1,8 +1,8 @@
 .alert {
-  --padding-top: var(--offset-sm);
-  --padding-left: var(--offset-md);
-  --padding-right: var(--offset-md);
-  --padding-bottom: var(--offset-sm);
+  --padding-top: var(--size-sm);
+  --padding-left: var(--size-md);
+  --padding-right: var(--size-md);
+  --padding-bottom: var(--size-sm);
   --box-shadow: 3px 3px 6px var(--light-bg-dark-shadow), -3px -3px 6px var(--light-bg-light-shadow);
   --box-shadow-2: 6px 6px 12px var(--light-bg-dark-shadow), -6px -6px 12px var(--light-bg-light-shadow);
   --box-shadow-3: 9px 9px 18px var(--light-bg-dark-shadow), -9px -9px 18px var(--light-bg-light-shadow);

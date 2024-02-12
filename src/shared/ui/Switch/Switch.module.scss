@@ -1,10 +1,10 @@
 .switch {
-  --selector-bg: var(--primary);
+  --selector-bg: var(--main-color);
 
   @include flex-center;
 
-  margin: var(--offset-xxs) var(--offset-xs);
-  padding: var(--offset-xxs);
+  margin: var(--size-xxs) var(--size-xs);
+  padding: var(--size-xxs);
 }
 
 .switch input {
@@ -13,9 +13,9 @@
   display: inline-block;
   outline: none;
   border: none;
-  border-radius: 4px;
-  width: 26px;
-  height: 26px;
+  border-radius: var(--size-xxs);
+  width: var(--size-2xl);
+  height: var(--size-2xl);
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -25,16 +25,16 @@
     content: "";
     position: absolute;
     overflow: hidden;
-    border-radius: 32px;
+    border-radius: var(--size-3xl);
     background-color: var(--bg-color);
   }
 
   &::before {
-    left: 4px;
-    top: 4px;
+    left: var(--size-xxs);
+    top: var(--size-xxs);
     z-index: 2;
-    width: 20px;
-    height: 20px;
+    width: var(--size-lg);
+    height: var(--size-lg);
     box-shadow: var(--box-shadow-small);
     transform: translateZ(0);
     transition: all 0.2s cubic-bezier(0.85, 0.05, 0.18, 1.35);
@@ -62,7 +62,7 @@
   margin-top: -2px;
   margin-left: 28px;
   font-size: 16px;
-  color: var(--text-color);
+  color: var(--placeholder-color);
 }
 
 .switch label p {

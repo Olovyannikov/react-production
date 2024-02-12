@@ -1,8 +1,9 @@
-import { Navbar } from '@/widgets/Navbar';
+import { Navbar } from '@/widgets';
+import s from './Header.module.scss';
 
 export const Header = () => {
     return (
-        <header>
+        <header className={s.root}>
             <Navbar/>
         </header>
     )

@@ -1,10 +1,10 @@
 import { RootLayout } from '@/layouts/RootLayout/ui';
-import { Alert } from '@/shared/ui/Alert';
+import { Button } from "@/shared/ui/Button";
 
 export default function IndexPage() {
     return (
         <RootLayout>
-            <Alert>ALert message</Alert>
+            <Button>Some btn</Button>
         </RootLayout>
     )
 }

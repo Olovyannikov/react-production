@@ -1,6 +1,10 @@
 .link {
   &.primary {
-    color: var(--color-primary);
+    color: var(--white);
+
+    &:hover {
+      color: var(--purple-300);
+    }
   }
 
   &.secondary {

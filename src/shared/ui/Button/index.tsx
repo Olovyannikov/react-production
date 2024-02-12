@@ -1,10 +1,10 @@
 import cn from 'clsx';
 import { Link } from 'react-router-dom';
-import { ButtonHTMLAttributes, DetailedHTMLProps, ElementType } from 'react';
+import type { ComponentProps, ElementType } from 'react';
 import { Theme, useTheme } from '@/app/providers/ThemeProvider';
 import s from './Button.module.scss';
 
-interface ButtonCommonProps<T extends ElementType> extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+interface ButtonCommonProps<T extends ElementType> extends ComponentProps<'button'> {
     href?: string;
     to?: string;
     as?: T;

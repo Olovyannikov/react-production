@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "rootDir": "./",
     "outDir": "./dist/",
     // Подсвечивает все места где не указан тип
     // Однако это не означает, что теперь вовсе нельзя использовать any.
@@ -29,16 +34,43 @@
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "baseUrl": ".",
+    "noEmitOnError": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "noLib": false,
+    "removeComments": true,
+    "declaration": false,
     "paths": {
-      "@/*": ["./src/*"]
-//      "*": ["./src/*"],
-//      "*": ["./src/*"],
-//      "*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["src", "src/app/types/global.d.ts", "src/app/types/css.d.ts"],
-  "exclude": ["node_modules"],
-  "files": ["node_modules/@types/webpack/index.d.ts"],
+  "include": [
+    "src",
+    "src/app/types/global.d.ts",
+    "src/app/types/css.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "node_modules/@types/webpack/index.d.ts"
+  ],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
