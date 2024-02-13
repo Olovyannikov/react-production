@@ -45,7 +45,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
+    "noUncheckedIndexedAccess": false,
     "noPropertyAccessFromIndexSignature": false,
     "allowUnusedLabels": true,
     "allowUnreachableCode": true,
@@ -68,7 +68,8 @@
   "include": [
     "src",
     "src/app/types/global.d.ts",
-    "src/app/types/css.d.ts"
+    "src/app/types/css.d.ts",
+    "config/jest/setupTest.ts"
   ],
   "exclude": [
     "node_modules"

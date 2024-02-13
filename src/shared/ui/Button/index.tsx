@@ -1,7 +1,9 @@
-import cn from 'clsx';
-import { Link } from 'react-router-dom';
 import type { ComponentProps, ElementType } from 'react';
+import { Link } from 'react-router-dom';
+import cn from 'clsx';
+
 import { Theme, useTheme } from '@/app/providers/ThemeProvider';
+
 import s from './Button.module.scss';
 
 interface ButtonCommonProps<T extends ElementType> extends ComponentProps<'button'> {
@@ -55,12 +57,12 @@ export const Button = <T extends ElementType = 'button'>({
         [s.outlined]: outlined,
         [s.rounded]: rounded,
         [s[size]]: size,
-        [s.text]: text
-    })
+        [s.text]: text,
+    });
 
     const Tag = as || 'button';
 
-    if (to && !!to.length) {
+    if (to && Boolean(to.length)) {
         return (
             <Link
                 className={classNames}
@@ -70,10 +72,10 @@ export const Button = <T extends ElementType = 'button'>({
             >
                 {children}
             </Link>
-        )
+        );
     }
 
-    if (Tag === 'a' || (href && !!href.length)) {
+    if (Tag === 'a' || (href && Boolean(href.length))) {
         return (
             <a
                 className={classNames}
@@ -85,10 +87,10 @@ export const Button = <T extends ElementType = 'button'>({
             >
                 {children}
             </a>
-        )
+        );
     }
 
     return (
         <Tag className={classNames} {...props} style={{ backgroundColor: bgColor, color }}>{children}</Tag>
-    )
-}
+    );
+};

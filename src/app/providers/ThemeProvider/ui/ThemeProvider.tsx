@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useMemo, useState } from 'react';
+import { type ReactNode, useEffect, useMemo, useState } from 'react';
 import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from '@/app/providers/ThemeProvider/lib/ThemeContext';
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT;
@@ -11,7 +11,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     const [theme, setTheme] = useState<Theme>(defaultTheme);
 
     useEffect(() => {
-        const root = document.querySelector('body #root');
+        const root = document.querySelector('body #root') as HTMLElement;
         root.classList.add(theme);
 
         return () => root.classList.remove(theme);
@@ -19,10 +19,10 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
     const defaultProps = useMemo(() => ({
         theme,
-        setTheme
-    }), [theme])
+        setTheme,
+    }), [theme]);
 
     return (
         <ThemeContext.Provider value={defaultProps}>{children}</ThemeContext.Provider>
-    )
-}
+    );
+};

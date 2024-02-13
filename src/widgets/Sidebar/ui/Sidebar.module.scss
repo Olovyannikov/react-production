@@ -2,8 +2,34 @@
   width: var(--sidebar-collapsed);
   height: calc(100vh - var(--navbar-height));
   transition: width 0.3s ease-in-out;
+  background-color: var(--sidebar-background);
 
   &.open {
     width: var(--sidebar-width);
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-inline: var(--size-sm);
+  padding-block: 14px;
+}
+
+.toggle {
+  color: var(--neutral-400);
+}
+
+.toggle:not(.open) {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 64px);
   }
 }
