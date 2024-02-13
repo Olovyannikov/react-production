@@ -5,6 +5,7 @@
   --text-secondary: var(--neutral-500);
   --placeholder-color: var(--neutral-300);
   --on-dark-bg-color: var(--neutral-200);
-  --bg-color: #fafafc;
+  --bg-color: var(--bg-color);
   --navbar-color: var(--neutral-600);
+  color-scheme: light;
 }

@@ -98,6 +98,12 @@
   --red-100: #ffedeb;
 }
 
+/* Globals */
+:root {
+  --bg-color: #fafafc;
+  --bg-color-dark: #1c1b1f;
+}
+
 /* Shadows */
 :root {
   --box-shadow-small: 1px 1px 2px var(--neutral-300), -1px -1px 2px var(--neutral-400);

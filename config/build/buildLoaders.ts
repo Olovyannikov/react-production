@@ -7,11 +7,11 @@ import { BuildOptions } from './types/config';
 
 const getLocalIdent = (
     context: loader.LoaderContext,
-    localIdentName: string,
+    _localIdentName: string,
     localName: string,
 ) => {
     const fileNameOrFolder = context.resourcePath.match(
-        /index\.module\.(css|scss|sass)$/
+        /index\.module\.(css|scss|sass)$/,
     )
         ? '[folder]'
         : '[name]';
@@ -19,7 +19,7 @@ const getLocalIdent = (
         (path.posix.relative(context.rootContext, context.resourcePath) + localName) as unknown as Buffer,
         'md5',
         'base64',
-        5
+        5,
     );
     const className = loaderUtils.interpolateName(
         context,
@@ -31,28 +31,8 @@ const getLocalIdent = (
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const svgLoader = {
         test: /\.svg$/,
-        use: ['@svgr/webpack']
-    }
-
-    const babelLoader = {
-        test: /\.(js|ts|jsx|tsx)$/,
-        exclude: /node_modules/,
-        use: {
-            loader: 'babel-loader',
-            options: {
-                presets: ['@babel/preset-env'],
-                plugins: [
-                    [
-                        'i18next-extract',
-                        {
-                            locales: ['ru', 'en'],
-                            keyAsDefaultValue: true
-                        }
-                    ]
-                ]
-            }
-        }
-    }
+        use: ['@svgr/webpack'],
+    };
 
     const styleLoader = options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader;
 
@@ -93,8 +73,8 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
             {
                 loader: 'postcss-loader', options: {
                     // Если используется postcss, сюда закинуть импорт миксинов или использовать postcss.config
-                    additionalData: ''
-                }
+                    additionalData: '',
+                },
             },
         ],
     };
@@ -111,40 +91,39 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
                         getLocalIdent,
                         auto: (resPath: string) => Boolean(resPath.includes('.module.')),
                     },
-                }
+                },
             },
             {
                 loader: 'sass-loader',
                 options: {
                     // Если используется sass, тут живут глобальные импорты для миксинов
                     additionalData: '@import "app/styles/general/_mixins.scss";',
-                }
-            }
-        ]
-    }
+                },
+            },
+        ],
+    };
 
     const typescriptLoader = {
         test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
-    }
+        use: 'swc-loader',
+        exclude: /node_modules/,
+    };
 
     const fileLoader = {
         test: /\.(png|webp|jpe?g|gif|woff2|woff)$/i,
         use: [
             {
-                loader: 'file-loader'
-            }
-        ]
-    }
+                loader: 'file-loader',
+            },
+        ],
+    };
 
     return [
         fileLoader,
         svgLoader,
-        babelLoader,
         typescriptLoader,
         cssLoader,
         moduleCssLoader,
         sassLoader,
-    ]
+    ];
 }

@@ -1,4 +1,6 @@
 .dark {
-  --main-color: var(--purple-500);
-  --bg-color: var(--neutral-500);
+  --main-color: #7b57e0;
+  --bg-color: var(--bg-color-dark);
+  --text-color: var(--neutral-100);
+  color-scheme: dark;
 }
